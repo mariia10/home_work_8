@@ -5,4 +5,4 @@ def test(answer, number, foundation):
     assert c is True
 
 
-test(20, 1, 1)
+test(2, 16, 7)
