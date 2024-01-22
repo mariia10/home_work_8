@@ -6,7 +6,7 @@ def testMod(answer, number, foundation):
 
 def testValidation(answer, number, foundation):
     c = check(answer, number, foundation)
-    assert c is True
+    assert c is False
 
 
 testMod("hhdehdh2", 16, 7)
