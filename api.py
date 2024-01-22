@@ -7,8 +7,7 @@ app = Flask(__name__)
 random_number = 0
 random_foundation = 0
 
-def checkAnswer(answer):
-    global random_number, random_foundation
+def checkAnswer(answer, random_number, random_foundation):
     return random_number%random_foundation==int(answer)
 
 @app.route("/")
@@ -25,7 +24,8 @@ def check():
     if(len(answer)==0):
         return
     textAnswer = "неправильный"
-    if(checkAnswer(answer)):
+    global random_number, random_foundation
+    if(checkAnswer(answer, random_number, random_foundation)):
         textAnswer = "правильный"
     return render_template('answer.html', answer = answer, 
                            forward_message = textAnswer)
