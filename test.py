@@ -1,13 +1,14 @@
-from payment import calculate as cal
+from api import checkAnswer as check
+from api import random_number as number
+from api import random_foundation as foundation
 
-def test(a,b):
-    c = cal(a,b)
+def test(answer, number, foundation):
+    number = 0
+    foundation = 0
 
-    test_c = a+b
+    c = check(answer)
 
-    assert c == test_c
+    assert c is True
 
 
-test(10,20)
-test(1,15)
-test(40,150)
+test(20)
