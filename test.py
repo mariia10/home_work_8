@@ -8,5 +8,5 @@ def testValidation(answer, number, foundation):
     c = check(answer, number, foundation)
     assert c is False
 
-
-testMod("hhdehdh2", 16, 7)
+testMod("2", 16, 7)
+testValidation("hhdehdh2", 16, 7)
